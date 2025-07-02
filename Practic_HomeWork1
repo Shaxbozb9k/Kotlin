@@ -1,5 +1,5 @@
 // First Work
-
+// Example 1
 fun main() {
     val number = 16
 
@@ -13,6 +13,20 @@ fun main() {
         println("FizzBuzz")
     } else{
         println("$number")
+    }
+}
+
+// Example 2
+
+fun main() {
+    val number = 27
+
+    
+   val result = when {
+       number % 3 == 0 && number % 15 != 0-> println("Fizz")
+       number % 5 == 0 && number % 15 != 0-> println("Buzz")
+       number % 15 == 0 -> println("FizzBuzz")
+       else -> println("$number")
     }
 }
 
