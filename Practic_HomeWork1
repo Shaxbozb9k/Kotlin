@@ -1,3 +1,5 @@
+// First Work
+
 fun main() {
     val number = 16
 
@@ -11,5 +13,23 @@ fun main() {
         println("FizzBuzz")
     } else{
         println("$number")
+    }
+}
+
+
+// Second Work
+
+fun main() {
+
+for (i in 1..30) {
+       
+        for (s in 1..(30 - i)) {
+            print(" ")
+        }
+      
+        for (a in 1..(2 * i - 1)) {
+            print("*")
+        }
+        println()
     }
 }
