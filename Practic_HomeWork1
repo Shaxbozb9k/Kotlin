@@ -1,0 +1,15 @@
+fun main() {
+    val number = 16
+
+    if (number % 3 == 0 && number % 15 != 0) {
+        println("Fizz")
+    } 
+    if (number % 5 == 0 && number % 15 != 0) {
+        println("Bizz")
+    }
+    if (number % 5 == 0 && number % 3 == 0){
+        println("FizzBuzz")
+    } else{
+        println("$number")
+    }
+}
