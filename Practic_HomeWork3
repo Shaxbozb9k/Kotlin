@@ -1,0 +1,28 @@
+// First Home Work
+
+class Dog {
+    var breed: String = "Unknown"
+    var name: String = "Unknown"
+    var age: Int = 0
+    
+    fun getDogInfo(){
+        println("Hello, my name is $name and I am $age years old.")
+    }
+    
+    fun bark(){
+        println("I am $breed")
+    }
+}
+
+fun main(){
+   val person1 = Dog()
+   
+   person1.breed = "Chihuahua"
+   person1.name = "mimi"
+   person1.age = 3
+    
+   person1.getDogInfo()
+  
+   person1.bark()
+   
+}
