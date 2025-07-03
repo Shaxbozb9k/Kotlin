@@ -26,3 +26,23 @@ fun main(){
    person1.bark()
    
 }
+// Second Home Work
+
+data class Rectangle(val width: Int, val height: Int)
+
+
+fun main() {
+    val first = Rectangle(10, 5)
+    val second = Rectangle(10, 5)
+
+    val another = first.copy(height = 7)
+    println("another: $another")
+
+    val another1 = second.copy(height = 7)
+    println("another1: $another1")
+
+    // destructuring
+    val (width, height) = second
+    println("Yuzasi: ${width * height}")
+    println("Perimetri: ${(width + height) * 2}")
+}
