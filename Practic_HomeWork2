@@ -1,0 +1,42 @@
+// FIRST HOME WORK
+// Error
+
+var nullableStr: String? = "Hello, Akita"
+
+val length = nullableStr.length
+println("String length: $length")
+
+// True
+
+    var nullableStr: String? = "Hello, Akita"
+
+    // Null bo'lishi mumkin, shuning uchun ?. ishlatyapmiz
+    val length = nullableStr?.length
+
+    println("String length: $length")
+
+
+// SECOND HOME WORK
+
+// Error
+var userName: String? = null
+
+val displayUser = userName ?: "user"?.uppercase()
+println("user: $displayUser")
+
+userName = "kotlinDev"
+val displayUser2 = userName ?: "user"?.uppercase()
+println("user: $displayUser2")
+
+
+// true
+    var userName: String? = null
+
+    // Agar userName null bo‘lsa, "user" ni katta harflarda chiqar
+    val displayUser = userName ?: "user".uppercase()
+    println("user: $displayUser")
+
+    // Endi userName null emas
+    userName = "kotlinDev"
+    val displayUser2 = userName ?: "user".uppercase()
+    println("user: $displayUser2")
