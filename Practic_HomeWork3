@@ -28,21 +28,53 @@ fun main(){
 }
 // Second Home Work
 
-data class Rectangle(val width: Int, val height: Int)
-
+data class Rectangle(val width: Int, val height: Int) {
+    // Yuza hisoblash metodi
+    fun getArea(): Int {
+        return width * height
+    }
+    
+    // Perimetr hisoblash metodi
+    fun getPerimeter(): Int {
+        return (width + height) * 2
+    }
+}
 
 fun main() {
+    // Birinchi to'rtburchak: width = 10, height = 5
     val first = Rectangle(10, 5)
+    
+    // Ikkinchi to'rtburchak: width = 10, height = 5 (birinchi bilan bir xil)
     val second = Rectangle(10, 5)
-
-    val another = first.copy(height = 7)
-    println("another: $another")
-
-    val another1 = second.copy(height = 7)
-    println("another1: $another1")
-
-    // destructuring
+    
+    // Birinchi va ikkinchi to'rtburchak bir xil ekanligini tekshirish
+    println("Birinchi va ikkinchi to'rtburchak bir xilmi: ${first == second}")
+    
+    // Birinchi to'rtburchakning toString() natijasini chiqarish
+    println("Birinchi to'rtburchak: $first")
+    
+    // Birinchi to'rtburchakni copy() metodidan foydalanib, faqat height ni 7 ga o'zgartirish
+    val third = first.copy(height = 7)
+    
+    // 3 ta to'rtburchakning yuzasi va perimetrini chiqarish
+    println("\n=== To'rtburchaklar ma'lumotlari ===")
+    
+    println("Birinchi to'rtburchak:")
+    println("  Yuza: ${first.getArea()}")
+    println("  Perimetr: ${first.getPerimeter()}")
+    
+    println("Ikkinchi to'rtburchak:")
+    println("  Yuza: ${second.getArea()}")
+    println("  Perimetr: ${second.getPerimeter()}")
+    
+    println("Uchinchi to'rtburchak (copy bilan yaratilgan):")
+    println("  To'rtburchak: $third")
+    println("  Yuza: ${third.getArea()}")
+    println("  Perimetr: ${third.getPerimeter()}")
+    
+    // Destructuring (qo'shimcha)
     val (width, height) = second
-    println("Yuzasi: ${width * height}")
-    println("Perimetri: ${(width + height) * 2}")
+    println("\nDestructuring natijasi:")
+    println("Width: $width, Height: $height")
+}
 }
