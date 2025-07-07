@@ -1,0 +1,42 @@
+// First Home Work
+open class Media(val title: String, val duration: Int) {
+    open fun play() {
+        println("$title Plying Media. (time: ${duration}m)")
+    }
+}
+
+class Audio(title: String, duration: Int, val artist: String) : Media(title, duration) {
+    override fun play() {
+        println("artist: $artist playing music.")
+    }
+
+    fun adjustVolume(level: Int) {
+        println("$level% Adjust Volume.")
+    }
+}
+
+class Video(val director: String, val resolution: String) : Media("Unknown", 0) {
+    override fun play() {
+        println("director: $director, resolution: $resolution playing video.")
+    }
+
+    fun skipForward(seconds: Int) {
+        println("$seconds second forwad skip.")
+    }
+}
+
+fun main() {
+    val audio1 = Audio("Butter", 3, "BTS")
+    audio1.play()
+    audio1.adjustVolume(80)
+
+    val video1 = Video("Parasite", "4K UHD")
+    video1.play()
+    video1.skipForward(30)
+
+    val genericMedia = Media("News Broadcast", 60)
+    genericMedia.play()
+}
+
+
+// Second Home Work
