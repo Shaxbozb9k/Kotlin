@@ -40,3 +40,21 @@ fun main() {
 
 
 // Second Home Work
+// 2.1
+fun main() {
+    val actors = listOf("Ummon Team", "Shakhzoda", "Sevinch Muminiva")
+
+    println("actors list: $actors")
+
+    println("first actors: ${actors[0]}")
+    println("third actors: ${actors[2]}")
+
+    println("actors count: ${actors.size}")
+
+    println("All actors:")
+    for (actor in actors) {
+        println(actor)
+    }
+
+}
+// 2.2
