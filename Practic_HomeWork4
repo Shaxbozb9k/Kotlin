@@ -58,3 +58,12 @@ fun main() {
 
 }
 // 2.2
+fun main() {
+    val fruits = mutableListOf("Apple", "Samsung", "Xiomi" , "Vivo")
+
+    
+    println("Royhati $fruits")
+    fruits.removeAt(3)
+    println("Olib tashlandi $fruits")  
+    
+}
