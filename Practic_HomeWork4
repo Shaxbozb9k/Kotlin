@@ -47,6 +47,7 @@ fun main() {
     println("actors list: $actors")
 
     println("first actors: ${actors[0]}")
+    println("third actors: ${actors[1]}")
     println("third actors: ${actors[2]}")
 
     println("actors count: ${actors.size}")
