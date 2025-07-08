@@ -66,3 +66,16 @@ fun main() {
     println("Olib tashlanmadi $fruits")  
     
 }
+// 2.3
+
+fun main() {
+    val kotlin = mutableListOf("Sabzi" , "Gosht")
+    
+    println("Xozirgi Royhat: $kotlin")
+    kotlin.add("Sut")
+    kotlin.add("Tuxum")
+    println(kotlin)
+    kotlin.remove("Sut")
+    println(kotlin)
+    
+}
